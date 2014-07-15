@@ -1,10 +1,19 @@
 {
-    "name": "multimediabs/kamba",
-    "description": "A powerful Puppet ENC",
+    "name": "kambalabs/KmbCore",
+    "description": "Kamba core module",
     "keywords": [
-        "puppet",
-        "mcollective",
-        "ENC"
+        "kamba",
+        "module"
+    ],
+    "homepage": "http://github.com/kambalabs/KmbCore",
+    "license": "GPL V2",
+    "authors": [
+        {
+            "name": "Emmanuel Bouton",
+            "email": "goten4@gmail.com",
+            "homepage": "http://github.com/goten4",
+            "role": "Developer"
+        }
     ],
     "require": {
         "php": ">=5.3.3",
@@ -15,5 +24,12 @@
         "phpunit/PHPUnit": "3.7.*",
         "zendframework/zend-developer-tools": "dev-master",
         "satooshi/php-coveralls": "dev-master"
+    },
+    "autoload": {
+        "classmap": [
+            "src/",
+            "test/KmbCoreTest/AbstractBootstrap.php",
+            "test/KmbCoreTest/View"
+        ]
     }
 }
