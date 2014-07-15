@@ -1,0 +1,19 @@
+{
+    "name": "multimediabs/kamba",
+    "description": "A powerful Puppet ENC",
+    "keywords": [
+        "puppet",
+        "mcollective",
+        "ENC"
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "zendframework/zendframework": "2.3.*",
+        "goten4/gtn-datatables": "dev-master"
+    },
+    "require-dev": {
+        "phpunit/PHPUnit": "3.7.*",
+        "zendframework/zend-developer-tools": "dev-master",
+        "satooshi/php-coveralls": "dev-master"
+    }
+}
