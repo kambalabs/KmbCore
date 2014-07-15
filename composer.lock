@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b4ec64d26f9cec5c67e3e7fdb5dcff1c",
+    "hash": "a1b59ba28580f782c4f3274817192446",
     "packages": [
         {
             "name": "goten4/gtn-datatables",
