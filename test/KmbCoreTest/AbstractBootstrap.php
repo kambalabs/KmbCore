@@ -18,7 +18,10 @@ abstract class AbstractBootstrap
      * Usually : dirname(dirname(__DIR__))
      * @return string
      */
-    abstract public static function rootPath();
+    public static function rootPath()
+    {
+        return dirname(dirname(__DIR__));
+    }
 
     public static function init()
     {
