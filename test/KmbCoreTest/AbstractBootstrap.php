@@ -13,6 +13,13 @@ abstract class AbstractBootstrap
 {
     protected static $serviceManager;
 
+    /**
+     * Get the root path of the module.
+     * Usually : dirname(dirname(__DIR__))
+     * @return string
+     */
+    abstract public static function rootPath();
+
     public static function init()
     {
         error_reporting(E_ALL | E_STRICT);
@@ -27,8 +34,7 @@ abstract class AbstractBootstrap
 
     public static function chroot()
     {
-        $rootPath = dirname(static::findParentPath('src'));
-        chdir($rootPath);
+        chdir(static::rootPath());
     }
 
     /**
@@ -39,10 +45,10 @@ abstract class AbstractBootstrap
     public static function getApplicationConfig()
     {
         $zf2ModulePaths = array();
-        if (($path = static::findParentPath('vendor'))) {
+        if (($path = static::findParentPath('kambalabs'))) {
             $zf2ModulePaths[] = $path;
         }
-        if (($path = static::findParentPath('kambalabs'))) {
+        if (($path = static::findParentPath('vendor'))) {
             $zf2ModulePaths[] = $path;
         }
 
@@ -65,7 +71,7 @@ abstract class AbstractBootstrap
     public static function getNamespacePaths()
     {
         return array(
-            'KmbCore' => dirname(dirname(__DIR__)) . '/src/KmbCore',
+            'KmbCore' => static::rootPath() . '/src/KmbCore',
             __NAMESPACE__ => __DIR__,
         );
     }
@@ -104,7 +110,7 @@ abstract class AbstractBootstrap
 
     protected static function findParentPath($path)
     {
-        $dir = __DIR__;
+        $dir = static::rootPath();
         $previousDir = '.';
         while (!is_dir($dir . '/' . $path)) {
             $dir = dirname($dir);
