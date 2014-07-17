@@ -1,6 +1,6 @@
 {
     "name": "kambalabs/kmb-core",
-    "description": "Kamba core module",
+    "description": "Kamba core modules",
     "keywords": [
         "kamba",
         "module"
@@ -16,20 +16,13 @@
         }
     ],
     "require": {
-        "php": ">=5.4",
-        "zendframework/zendframework": "2.3.*",
-        "goten4/gtn-datatables": "dev-master"
-    },
-    "require-dev": {
-        "phpunit/PHPUnit": "3.7.*",
-        "zendframework/zend-developer-tools": "dev-master",
-        "satooshi/php-coveralls": "dev-master"
-    },
-    "autoload": {
-        "classmap": [
-            "src/",
-            "test/KmbCoreTest/AbstractBootstrap.php",
-            "test/KmbCoreTest/View"
-        ]
+        "kambalabs/kmb-base": "dev-master",
+        "kambalabs/kmb-authentication": "dev-master",
+        "kambalabs/kmb-permission": "dev-master",
+        "kambalabs/kmb-puppetdb": "dev-master",
+        "kambalabs/kmb-cache": "dev-master",
+        "kambalabs/kmb-dashboard": "dev-master",
+        "kambalabs/kmb-servers": "dev-master",
+        "kambalabs/kmb-puppet": "dev-master"
     }
 }
