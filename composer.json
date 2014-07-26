@@ -17,10 +17,13 @@
     ],
     "require": {
         "kambalabs/kmb-base": "dev-master",
+        "kambalabs/kmb-domain": "dev-master",
+        "kambalabs/kmb-zend-db-infrastructure": "dev-master",
         "kambalabs/kmb-authentication": "dev-master",
         "kambalabs/kmb-permission": "dev-master",
         "kambalabs/kmb-puppetdb": "dev-master",
         "kambalabs/kmb-cache": "dev-master",
+        "kambalabs/kmb-pm-proxy": "dev-master",
         "kambalabs/kmb-dashboard": "dev-master",
         "kambalabs/kmb-servers": "dev-master",
         "kambalabs/kmb-puppet": "dev-master"
